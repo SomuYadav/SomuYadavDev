@@ -58,6 +58,7 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "3xl": "2rem", // Custom value for more rounded corners
       },
       keyframes: {
         "accordion-down": {

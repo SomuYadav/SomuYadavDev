@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Enables static HTML export for GitHub Pages
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -8,9 +7,16 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true, // Required for static export with Image component
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        port: '',
+        pathname: '**',
+      },
+    ],
+    unoptimized: true,
   },
-  basePath: '/SomuYadavDev', // Adjust this to your repository name
 };
 
 export default nextConfig;

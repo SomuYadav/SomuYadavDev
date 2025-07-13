@@ -173,7 +173,7 @@ export default function Portfolio() {
         "Improved networking in the DVUtility Swift package and optimized URLCache.",
         "Documented workflows and conducted rigorous testing for reliability.",
       ],
-      logo: "/img/index/AppICon.png",
+      logo: "/img/index/AppICon.png", // Assuming a generic app icon if specific not provided
     },
     {
       company: "Consagous Technologies",
@@ -531,16 +531,19 @@ export default function Portfolio() {
 
                   <motion.div
                     className={`relative ${index % 2 === 1 ? "lg:col-start-1" : ""}`}
-                    whileHover={{ scale: 1.02 }}
+                    whileHover={{
+                      scale: 1.02,
+                      boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
+                    }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-3xl p-8 overflow-hidden">
+                    <div className="relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-[2rem] p-8 overflow-hidden shadow-xl">
                       <Image
                         src={project.image || "/placeholder.svg"}
                         alt={project.name}
                         width={400}
                         height={600}
-                        className="mx-auto max-w-full h-auto"
+                        className="mx-auto max-w-full h-auto rounded-xl"
                       />
                     </div>
                   </motion.div>
@@ -586,7 +589,7 @@ export default function Portfolio() {
 
             <FadeInWhenVisible delay={0.2}>
               <div className="relative">
-                <Card className="p-8 bg-white border-0 shadow-sm rounded-3xl">
+                <Card className="p-8 bg-white border-0 shadow-xl rounded-[2rem] hover:shadow-2xl transition-shadow">
                   <h3 className="text-2xl font-light mb-8">Professional Summary</h3>
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
@@ -628,7 +631,7 @@ export default function Portfolio() {
           <div className="space-y-16">
             {experiences.map((job, index) => (
               <FadeInWhenVisible key={index} delay={index * 0.1}>
-                <Card className="p-8 bg-white border-0 shadow-sm rounded-3xl">
+                <Card className="p-8 bg-white border-0 shadow-xl rounded-[2rem] hover:shadow-2xl transition-shadow">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
                     <div className="flex items-center mb-4 md:mb-0">
                       <Image
@@ -677,7 +680,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(skills).map(([category, skillList], index) => (
               <FadeInWhenVisible key={category} delay={index * 0.1}>
-                <Card className="p-8 bg-white border-0 shadow-sm rounded-3xl h-full">
+                <Card className="p-8 bg-white border-0 shadow-xl rounded-[2rem] hover:shadow-2xl transition-shadow h-full">
                   <h3 className="text-2xl font-light mb-6">{category}</h3>
                   <div className="flex flex-wrap gap-2">
                     {skillList.map((skill) => (
@@ -711,7 +714,7 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-8">
             {education.map((edu, index) => (
               <FadeInWhenVisible key={index} delay={index * 0.1}>
-                <Card className="p-8 bg-white border-0 shadow-sm rounded-3xl h-full">
+                <Card className="p-8 bg-white border-0 shadow-xl rounded-[2rem] hover:shadow-2xl transition-shadow h-full">
                   <div className="flex items-center mb-4">
                     <GraduationCap className="w-8 h-8 text-gray-600 mr-4" />
                     <div>
@@ -743,7 +746,7 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12">
               <FadeInWhenVisible delay={0.2}>
-                <Card className="p-8 bg-white border-0 shadow-sm rounded-3xl">
+                <Card className="p-8 bg-white border-0 shadow-xl rounded-[2rem] hover:shadow-2xl transition-shadow">
                   <h3 className="text-2xl font-light mb-8">Get In Touch</h3>
                   <div className="space-y-6">
                     <div className="flex items-center space-x-4">
@@ -803,7 +806,7 @@ export default function Portfolio() {
               </FadeInWhenVisible>
 
               <FadeInWhenVisible delay={0.4}>
-                <Card className="p-8 bg-white border-0 shadow-sm rounded-3xl">
+                <Card className="p-8 bg-white border-0 shadow-xl rounded-[2rem] hover:shadow-2xl transition-shadow">
                   <h3 className="text-2xl font-light mb-8">Quick Links</h3>
                   <div className="space-y-4">
                     {[
