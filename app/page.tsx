@@ -197,7 +197,7 @@ export default function Portfolio() {
         "Integrated Sinch Library, Stripe payments, and CallKit for enhanced functionality.",
         "Built a custom Network Manager for API handling with scalable MVC with Delegate patterns.",
       ],
-      logo: "/img/index/AppIConFlexiasia.jpg", // Using Flexiasia icon
+      logo: "/img/index/AppIConFlexiasia.png", // Using Flexiasia icon
     },
     {
       company: "Natraj Infotech",
@@ -343,7 +343,7 @@ export default function Portfolio() {
             className="mb-8"
           >
             <div className="relative w-32 h-32 mx-auto mb-8">
-              <Image src="/css/img/profile.jpg" alt="Somu Yadav" fill className="rounded-full object-cover" priority />
+              <Image src="/css/img/profile.png" alt="Somu Yadav" fill className="rounded-full object-cover" priority />
               <motion.div
                 className="absolute inset-0 rounded-full border-2 border-gray-200"
                 animate={{ rotate: 360 }}

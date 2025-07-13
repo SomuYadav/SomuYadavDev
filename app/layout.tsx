@@ -1,6 +1,7 @@
 import type React from "react"
-import "./globals.css"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({
@@ -8,13 +9,17 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Somu Yadav - iOS Engineer Portfolio",
   description: "Professional portfolio of Somu Yadav, an iOS Engineer with 7+ years of experience.",
     generator: 'v0.dev'
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.variable}>
